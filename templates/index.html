@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Отклики</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-5">Получение списка откликов на hh.ru</h1>
+
+      <form action="/generate_xls" method="POST">
+
+        <div class="mb-3">
+          <label for="user-agent" class="form-label">User-Agent</label>
+          <input type="text" class="form-control" id="user-agent" name="user-agent" placeholder="Введите User-Agent браузера, который будет использоваться для отправки запросов на hh.ru." required>
+        </div>
+
+        <div class="mb-3">
+          <label for="cookie" class="form-label">Cookie</label>
+          <input type="text" class="form-control" id="cookie" name="cookie" placeholder="Введите Cookie сессии, которую вы использовали для авторизации на hh.ru." required>
+        </div>
+
+        <div class="mb-3">
+          <label for="num-pages" class="form-label">Количество страниц</label>
+          <input type="number" class="form-control" id="num-pages" name="num-pages" placeholder="Введите количество страниц откликов, которые нужно получить." required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Получить свои отклики в CSV-формате</button>
+
+      </form>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+  </body>
+</html>
