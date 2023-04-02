@@ -45,7 +45,7 @@ def create_excel_file(values):
     return df.to_csv(index=False, encoding='utf8')
 
 
-async def main(headers, number_pages):
+async def main_hh(headers, number_pages):
     tasks = [asyncio.create_task(get_responses(page, headers)) for page in range(number_pages)]
     pages = await asyncio.gather(*tasks)
     values = [response for page in pages for response in page]
